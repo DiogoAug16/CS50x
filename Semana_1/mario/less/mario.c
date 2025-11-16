@@ -2,19 +2,32 @@
 #include <cs50.h>
 
 void print_row(int n) {
-    for (int i = 0; i < n; i++) {
-        printf("#");
+    for (int i = 1; i <= n; i++) {
+        
+        for (int k = n; k > i; k--) {
+            printf(" ");
+        }
+
+        for (int j = 0; j < i; j++) {
+            printf("#");
+        }
+        
+        printf("\n");
     }
-    printf("\n");
+}
+
+int ask_height() {
+    int n;
+    do {
+        n = get_int("Height: ");
+    } while (n <= 0 );
+    return n;
 }
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    int n = get_int("Height: ");
-    for (int i = 1; i < n; i++) {
-        printf(" ");
-        print_row(n);
-    }
+    print_row(ask_height());
+
     return 0;
 }

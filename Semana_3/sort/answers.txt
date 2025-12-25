@@ -1,0 +1,8 @@
+sort1 uses: Bubbke
+How do you know?: it runs faster on already sorted or nearly sorted input
+
+sort2 uses: Selection
+How do you know?: it always makes the same number of comparisons regardless of input order
+
+sort3 uses: Merge
+How do you know?: it is fast even for large inputs and has consistent n log n runtime
